@@ -1,0 +1,36 @@
+body {
+  color: white;
+  background-color: #0a0a23;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+ul {
+  width: 100%;
+}
+
+li {
+  flex-grow: 1;
+  transition-duration: 0.2s;
+  color: white;
+  background-color: #060618;
+}
+li.nav-item a.nav-link {
+  color: #ebebeb !important;
+  background-color: #060618;
+}
+li.nav-item a:hover, li.nav-item:hover {
+  color: #ebebeb;
+  background-color: #0a0a23;
+}
+
+/*# sourceMappingURL=index.css.map */

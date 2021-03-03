@@ -1,0 +1,46 @@
+// VARIABLES
+$light: #ebebeb;
+$navy: #0a0a23;
+$dark-navy: #060618;
+// UNIVERSAL
+
+body {
+    color: white;
+    background-color: $navy;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+ul {
+    width: 100%;
+}
+
+li {
+    flex-grow: 1;
+    transition-duration: 0.2s;
+    color: white;
+    background-color: $dark-navy;
+    &.nav-item {
+        a {
+            &.nav-link{
+                color: $light!important;
+                background-color: $dark-navy;
+            }
+        }   
+        a:hover, &:hover {
+            color: $light;
+            background-color: $navy;
+        } 
+    }
+}
+
+
