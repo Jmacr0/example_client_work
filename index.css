@@ -1,3 +1,10 @@
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   color: white;
   background-color: #0a0a23;
@@ -14,22 +21,22 @@ body {
   box-shadow: none;
 }
 
-ul {
+ul#main-navigation {
   width: 100%;
 }
-
-li {
+ul#main-navigation li {
+  text-align: center;
   flex-grow: 1;
   transition-duration: 0.2s;
   color: white;
   background-color: #060618;
 }
-li.nav-item a.nav-link {
-  color: #ebebeb !important;
+ul#main-navigation li.nav-item a.nav-link {
+  color: #ebebeb;
   background-color: #060618;
 }
-li.nav-item a:hover, li.nav-item:hover {
-  color: #ebebeb;
+ul#main-navigation li.nav-item a:hover, ul#main-navigation li.nav-item:hover {
+  color: white;
   background-color: #0a0a23;
 }
 
