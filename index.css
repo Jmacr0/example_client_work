@@ -5,6 +5,59 @@
   align-items: center;
 }
 
+.max-vh {
+  height: 100vh;
+}
+
+.skew-y {
+  transform: skewy(8deg);
+}
+
+.right-skew {
+  overflow-x: hidden;
+  transform: skewX(-15deg);
+}
+.right-skew .theatre-technician-image {
+  width: 200%;
+  height: 100%;
+  transform: skewX(15deg);
+  position: absolute;
+  transform-origin: top left;
+  background-image: url(https://www.thevictoriancosmeticinstitute.com.au/wp-content/uploads/2019/12/plastic-cosmetic-surgery-operating-room-1024x683.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.right-skew.theatre-technician-text {
+  background-color: teal;
+}
+.right-skew .float {
+  position: absolute;
+  transform: skewX(15deg);
+}
+
+.left-skew {
+  overflow-x: hidden;
+  transform: skewX(15deg);
+}
+.left-skew .tennis-club-image {
+  width: 200%;
+  height: 100%;
+  transform: skewX(-15deg);
+  position: absolute;
+  transform-origin: bottom left;
+  background-image: url(https://www.essentiallysports.com/wp-content/uploads/Federer-backhand-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.left-skew.tennis-club-text {
+  color: black;
+  background-color: greenyellow;
+}
+.left-skew .float {
+  position: absolute;
+  transform: skewX(-15deg);
+}
+
 body {
   color: white;
   background-color: #0a0a23;
@@ -35,9 +88,14 @@ ul#main-navigation li.nav-item a.nav-link {
   color: #ebebeb;
   background-color: #060618;
 }
-ul#main-navigation li.nav-item a:hover, ul#main-navigation li.nav-item:hover {
+ul#main-navigation li.nav-item a:hover,
+ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul#main-navigation li.nav-item:focus {
   color: white;
   background-color: #0a0a23;
+}
+
+.client-image {
+  height: 20vh;
 }
 
 /*# sourceMappingURL=index.css.map */

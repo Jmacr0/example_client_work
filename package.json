@@ -4,7 +4,7 @@
   "description": "example_client_work",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon server.js & npm run sass-watch",
     "start": "node server.js",
     "sass-watch": "sass --watch index.scss index.css",
     "sass-build": "sass index.scss index.css"
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Jmacr0/example_client_work#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "bootstrap": "^4.6.0",
     "express": "^4.17.1",
     "sass": "^1.32.8"
