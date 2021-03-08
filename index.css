@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -6,61 +8,134 @@
 }
 
 .max-vh {
-  height: 100vh;
+  max-height: 100vh;
+}
+
+.min-vh {
+  min-height: 100vh;
 }
 
 .skew-y {
-  transform: skewy(8deg);
+  transform: skewy(5deg);
 }
 
-.right-skew {
-  overflow-x: hidden;
-  transform: skewX(-15deg);
+.skew-y-reverse {
+  transform: skewY(-5deg);
 }
-.right-skew .theatre-technician-image {
-  width: 200%;
-  height: 100%;
-  transform: skewX(15deg);
-  position: absolute;
+
+.fa-sort-down {
+  font-size: 3rem;
+}
+
+.blink-me {
+  animation: blinker 1s linear infinite;
+}
+
+.blink-pulse-me {
+  -webkit-animation: pulse 2s infinite;
+  animation: blinker 1s linear infinite, pulse 2s infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+#landing {
+  background: linear-gradient(to left, #e66465, #9198e5);
+}
+#landing .main-heading {
+  margin-top: 20px;
+  font-family: "Michroma";
+  text-align: center;
+}
+#landing .scroll-div {
+  margin-top: 5%;
+}
+#landing .scroll-text {
+  font-size: 0.8rem;
+}
+
+#intro {
+  background-color: black;
+}
+#intro .col-md {
+  margin-bottom: 5rem;
+}
+#intro .text-box {
+  background-color: white;
+  color: black;
+  font-family: "Michroma";
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 40px;
+  border-radius: 50px 50px 0px;
+}
+#intro .text-box-secondary {
+  color: #979797;
+  font-family: "Michroma";
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 40px;
+}
+#intro .link-box {
   transform-origin: top left;
-  background-image: url(https://www.thevictoriancosmeticinstitute.com.au/wp-content/uploads/2019/12/plastic-cosmetic-surgery-operating-room-1024x683.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin-top: 3rem;
 }
-.right-skew.theatre-technician-text {
+#intro .link-box .col {
+  text-align: center;
+  transition-duration: 0.5s;
+}
+#intro .link-box .col:hover {
+  background-color: #979797;
+  color: black;
+  cursor: pointer;
+}
+#intro .link-box i {
+  margin: 1rem;
+  font-size: 2rem;
+}
+#intro .heading-div {
+  overflow: hidden;
+}
+#intro .heading {
+  font-family: "Fascinate";
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#intro .section-heading {
+  font-family: "Michroma";
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+#theatre-technician {
   background-color: teal;
 }
-.right-skew .float {
-  position: absolute;
-  transform: skewX(15deg);
-}
 
-.left-skew {
-  overflow-x: hidden;
-  transform: skewX(15deg);
-}
-.left-skew .tennis-club-image {
-  width: 200%;
-  height: 100%;
-  transform: skewX(-15deg);
-  position: absolute;
-  transform-origin: bottom left;
-  background-image: url(https://www.essentiallysports.com/wp-content/uploads/Federer-backhand-1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.left-skew.tennis-club-text {
-  color: black;
+#tennis-club {
   background-color: greenyellow;
-}
-.left-skew .float {
-  position: absolute;
-  transform: skewX(-15deg);
 }
 
 body {
   color: white;
-  background-color: #0a0a23;
+  background-color: black;
 }
 
 .navbar {

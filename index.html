@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9c70a01762.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
     <title>Jmacro - Example Client Work</title>
 </head>
@@ -34,58 +36,77 @@
             </ul>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row max-vh">
+    <div id="landing" class="container-fluid">
+        <div class="row min-vh max-vh">
             <div class="col flex-column">
-                <img class="client-image" src="./assets/images/client.png" alt="client-png" data-aos="fade-up"
+                <img class="client-image" src="./assets/images/client.png" alt="client-png" data-aos="fade-left"
                     data-aos-duration="3000">
-                <h1 style="margin-top: 20px;">CLIENT PORTFOLIO</h1>
+                <h1 class="main-heading">CLIENT PORTFOLIO</h1>
                 <h2>jmacro.dev</h2>
+                <div class="flex-column scroll-div">
+                    <i class="fas fa-sort-down blink-me pulse-me"></i>
+                    <p class="scroll-text blink-me">scroll</p>
+                </div>
             </div>
         </div>
     </div>
-    <div id="intro" class="row max-vh skew-y" style="background-color: black;"></div>
-    <div id="theatre-technician" class="row max-vh skew-y" style="background-color: greenyellow;"></div>
-    <div id="tennis-club" class="row max-vh skew-y" style="background-color: teal;"></div>
-
-    <!-- <div id="theatre-technician" class="container-fluid">
-        <div class="row max-vh">
-            <div class="col flex-column right-skew">
-                <div class="theatre-technician-image"></div>
-                <h2 class="float">Theatre Technician</h2>
+    <div id="intro" class="container-fluid min-vh skew-y">
+        <div class="row">
+            <div class="col-md">
+                <h2 class="section-heading">A Client Portfolio?</h2>
+                <div class="text-box">
+                    <p class="h5 skew-y-reverse">This portfolio is a list of existing and example client projects I have
+                        designed &
+                        developed
+                    </p>
+                    <p class="h5 skew-y-reverse">The intent is to showcase the design and user interactions I can
+                        create, to match
+                        different
+                        clientele needs & requirements.
+                    </p>
+                </div>
+                <div class="text-box-secondary">
+                    <p class="h5 skew-y-reverse">I am Jmacro.</p>
+                    <p class="h5 skew-y-reverse">
+                        Passion for design, development, user experience, and exceeding
+                        project expectations.</p>
+                    <!-- <a href="https://jmacro.dev" target="_blank">jmacro.dev</a> -->
+                </div>
+                <div class="row g-0 link-box skew-y-reverse">
+                    <div class="col">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
             </div>
-            <div class="col flex-column right-skew theatre-technician-text">
-                <p class="float">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius consectetur perferendis
-                    modi totam
-                    reiciendis temporibus iure facilis necessitatibus laboriosam veritatis maxime voluptatum sequi fugit
-                    quis rem, aut magni ad eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quis
-                    modi voluptatibus quos magnam culpa sequi beatae eligendi dolorum fugit. Sequi porro corrupti
-                    architecto neque cumque cum blanditiis ipsa voluptatibus. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Modi repellendus nisi voluptate sunt, exercitationem error eos ut nulla labore
-                    fugiat consequatur, temporibus impedit illo eius rem soluta alias quia! Voluptates.</p>
+            <div class="col-md heading-div flex-column skew-y-reverse">
+                <h3 class="heading" data-aos="fade-left" data-aos-duration="1500">Plan</h3>
+                <h3 class="heading" data-aos="fade-left" data-aos-duration="2000">Design</h3>
+                <h3 class="heading" data-aos="fade-left" data-aos-duration="2500">Create</h3>
+                <h3 class="heading" data-aos="fade-left" data-aos-duration="3000">Refine</h3>
+                <!-- <img src="./assets/images/laptop.png" alt="laptop-image" width="80%"> -->
             </div>
         </div>
     </div>
-    <div id="tennis-club" class="container-fluid">
-        <div class="row max-vh">
-            <div class="col flex-column left-skew">
-                <div class="tennis-club-image"></div>
-                <h2 class="float">Tennis Club</h2>
-            </div>
-            <div class="col flex-column left-skew tennis-club-text">
-                <p class="float">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius consectetur perferendis
-                    modi totam
-                    reiciendis temporibus iure facilis necessitatibus laboriosam veritatis maxime voluptatum sequi fugit
-                    quis rem, aut magni ad eos! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quis
-                    modi voluptatibus quos magnam culpa sequi beatae eligendi dolorum fugit. Sequi porro corrupti
-                    architecto neque cumque cum blanditiis ipsa voluptatibus. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Modi repellendus nisi voluptate sunt, exercitationem error eos ut nulla labore
-                    fugiat consequatur, temporibus impedit illo eius rem soluta alias quia! Voluptates.</p>
+    <div id="theatre-technician" class="container-fluid min-vh skew-y">
+        <div class="row">
+            <div class="col">
+                <h2>Theatre Technician</h2>
             </div>
         </div>
-    </div> -->
+    </div>
+    <div id="tennis-club" class="container-fluid min-vh skew-y">
+        <div class="row">
+            <div class="col">
+                <h2>Tennis Club</h2>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -95,6 +116,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>

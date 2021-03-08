@@ -3,7 +3,11 @@ $light: #ebebeb;
 $navy: #0a0a23;
 $dark-navy: #060618;
 
-//ALIGNMENT
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+// ALIGNMENT
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -12,64 +16,129 @@ $dark-navy: #060618;
 }
 
 .max-vh {
-    height: 100vh;
+    max-height: 100vh;
 }
-
+.min-vh {
+    min-height: 100vh;
+}
 .skew-y {
-    transform: skewy(8deg);
+    transform: skewy(5deg);
+}
+.skew-y-reverse {
+    transform: skewY(-5deg);
 }
 
-.right-skew {
-    overflow-x: hidden;
-    transform: skewX(-15deg);
-    // transform-origin: top left;
-    .theatre-technician-image{
-        width: 200%;
-        height: 100%;
-        transform: skewX(15deg);
-        position: absolute;
+// ICONS
+.fa-sort-down {
+    font-size: 3rem;
+}
+.blink-me {
+    animation: blinker 1s linear infinite;
+}
+.blink-pulse-me {
+    -webkit-animation: pulse 2s infinite;
+    animation: blinker 1s linear infinite, pulse 2s infinite;
+}
+@keyframes blinker {
+    50% {
+    opacity: 0;
+    }
+}
+@keyframes pulse {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    50% {
+        -webkit-transform: translate(0, 10px);
+        transform: translate(0, 10px);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+// SECTIONS
+#landing {
+    background: linear-gradient(to left,#e66465, #9198e5);
+    .main-heading {
+        margin-top: 20px;
+        font-family: 'Michroma';
+        text-align: center;
+    }
+    .scroll-div {
+        margin-top: 5%;
+    }
+    .scroll-text {
+        font-size: 0.8rem;
+    }
+}
+#intro {
+    background-color: black;
+    .col-md {
+        margin-bottom: 5rem;
+    }
+    .text-box {
+        background-color: white; 
+        color: black; 
+        font-family: 'Michroma';
+        font-weight: bold;
+        font-size: 1.5rem; 
+        padding: 40px;
+        border-radius: 50px 50px 0px;
+    }
+    .text-box-secondary {
+        color: rgb(151, 151, 151); 
+        font-family: 'Michroma';
+        font-weight: bold;
+        font-size: 1.5rem; 
+        padding: 40px;
+    }
+    .link-box {
         transform-origin: top left;
-        background-image: url(https://www.thevictoriancosmeticinstitute.com.au/wp-content/uploads/2019/12/plastic-cosmetic-surgery-operating-room-1024x683.jpg);
-        background-repeat: no-repeat; 
-        background-size: cover;
+        margin-top: 3rem;
+        .col {
+            text-align: center;
+            transition-duration: 0.5s;
+            &:hover {
+                background-color: rgb(151, 151, 151); 
+                color: black;
+                cursor: pointer;
+            }
+        }
+        i {
+            margin: 1rem;
+            font-size: 2rem;
+        }
     }
-    &.theatre-technician-text {
-        background-color: teal;
+    .heading-div {
+        overflow: hidden;
     }
-    .float {
-        position: absolute;
-        transform: skewX(15deg);
+    .heading {
+        font-family: 'Fascinate';
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .section-heading {
+        font-family: 'Michroma';
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        text-align: center;
     }
 }
-
-.left-skew {
-    overflow-x: hidden;
-    transform: skewX(15deg);
-    // transform-origin: bottom left;
-    .tennis-club-image{
-        width: 200%;
-        height: 100%;
-        transform: skewX(-15deg);
-        position: absolute;
-        transform-origin: bottom left;
-        background-image: url(https://www.essentiallysports.com/wp-content/uploads/Federer-backhand-1.jpg);
-        background-repeat: no-repeat; 
-        background-size: cover;
-    }
-    &.tennis-club-text {
-        color: black;
-        background-color: greenyellow;
-    }
-    .float {
-        position: absolute;
-        transform: skewX(-15deg);
-    }
+#theatre-technician {
+    background-color: teal;
+}
+#tennis-club {
+    background-color: greenyellow;
 }
 
 // UNIVERSAL
 body {
     color: white;
-    background-color: $navy;
+    background-color: black;
 }
 
 .navbar {
