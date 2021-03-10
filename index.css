@@ -55,8 +55,19 @@
     transform: translate(0, 0);
   }
 }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 #landing {
   background: linear-gradient(to left, #e66465, #9198e5);
+}
+#landing .client-image {
+  height: 20vh;
 }
 #landing .main-heading {
   margin-top: 20px;
@@ -96,18 +107,40 @@
   transform-origin: top left;
   margin-top: 3rem;
 }
-#intro .link-box .col {
-  text-align: center;
-  transition-duration: 0.5s;
-}
-#intro .link-box .col:hover {
-  background-color: #979797;
-  color: black;
-  cursor: pointer;
-}
 #intro .link-box i {
   margin: 1rem;
   font-size: 2rem;
+}
+#intro .link-box .col {
+  border-radius: 10px 10px 0px;
+  text-align: center;
+  transition-duration: 1s;
+}
+#intro .link-box .col a {
+  text-decoration: none;
+  color: #ebebeb;
+}
+#intro .link-box .col:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #979797;
+}
+#intro .link-box .col:hover i {
+  margin: 0.6rem;
+  font-size: 2.4rem;
+}
+#intro .link-box .col:hover span {
+  display: inline;
+  letter-spacing: 0.2rem;
+  transition: 0.5s;
+}
+#intro .link-box .col:hover:first-child {
+  background-color: #2867B2;
+  color: white;
+}
+#intro .link-box .col:hover:last-child {
+  background-color: #1DA1F2;
+  color: white;
 }
 #intro .heading-div {
   overflow: hidden;
@@ -118,15 +151,18 @@
   text-align: center;
   margin-bottom: 2rem;
 }
-#intro .section-heading {
-  font-family: "Michroma";
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  text-align: center;
-}
 
 #theatre-technician {
   background-color: teal;
+}
+#theatre-technician .text-box {
+  background-color: black;
+  color: teal;
+  font-family: "Michroma";
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 40px;
+  border-radius: 50px 50px 0px;
 }
 
 #tennis-club {
@@ -169,8 +205,11 @@ ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul
   background-color: #0a0a23;
 }
 
-.client-image {
-  height: 20vh;
+.section-heading {
+  font-family: "Michroma";
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: start;
 }
 
 /*# sourceMappingURL=index.css.map */

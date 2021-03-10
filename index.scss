@@ -28,7 +28,7 @@ $dark-navy: #060618;
     transform: skewY(-5deg);
 }
 
-// ICONS
+// ICONS & ANIMATIONS
 .fa-sort-down {
     font-size: 3rem;
 }
@@ -58,10 +58,17 @@ $dark-navy: #060618;
         transform: translate(0, 0);
     }
 }
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
 
 // SECTIONS
 #landing {
     background: linear-gradient(to left,#e66465, #9198e5);
+    .client-image {
+        height: 20vh;
+    }
     .main-heading {
         margin-top: 20px;
         font-family: 'Michroma';
@@ -98,18 +105,40 @@ $dark-navy: #060618;
     .link-box {
         transform-origin: top left;
         margin-top: 3rem;
-        .col {
-            text-align: center;
-            transition-duration: 0.5s;
-            &:hover {
-                background-color: rgb(151, 151, 151); 
-                color: black;
-                cursor: pointer;
-            }
-        }
         i {
             margin: 1rem;
             font-size: 2rem;
+        }
+        .col {
+            border-radius: 10px 10px 0px;
+            text-align: center;
+            transition-duration: 1s;
+            a {
+                text-decoration: none;
+                color: $light;
+            }
+            &:hover {
+                cursor: pointer;
+                color: black;
+                background-color: rgb(151, 151, 151); 
+                i {
+                    margin: 0.6rem;
+                    font-size: 2.4rem;
+                }
+                span {
+                    display: inline;
+                    letter-spacing: .2rem; 
+                    transition: 0.5s;
+                };
+                &:first-child {
+                    background-color: #2867B2;
+                    color: white; 
+                }
+                &:last-child {
+                    background-color: #1DA1F2;
+                    color: white; 
+                }
+            }
         }
     }
     .heading-div {
@@ -121,15 +150,18 @@ $dark-navy: #060618;
         text-align: center;
         margin-bottom: 2rem;
     }
-    .section-heading {
-        font-family: 'Michroma';
-        margin-top: 2rem;
-        margin-bottom: 3rem;
-        text-align: center;
-    }
 }
 #theatre-technician {
     background-color: teal;
+    .text-box {
+        background-color: black; 
+        color: teal; 
+        font-family: 'Michroma';
+        font-weight: bold;
+        font-size: 1.5rem; 
+        padding: 40px;
+        border-radius: 50px 50px 0px;
+    }
 }
 #tennis-club {
     background-color: greenyellow;
@@ -178,8 +210,11 @@ ul#main-navigation {
     }
 }
 
-.client-image {
-    height: 20vh;
+.section-heading {
+    font-family: 'Michroma';
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    text-align: start;
 }
 
 
