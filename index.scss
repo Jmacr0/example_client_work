@@ -28,6 +28,56 @@ $dark-navy: #060618;
     transform: skewY(-5deg);
 }
 
+// UNIVERSAL
+body {
+    color: white;
+    background-color: black;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+ul#main-navigation {
+    width: 100%;
+    li {
+        text-align: center;
+        flex-grow: 1;
+        transition-duration: 0.2s;
+        color: white;
+        background-color: $dark-navy;
+        &.nav-item {
+            a {
+                &.nav-link{
+                    color: $light;
+                    background-color: $dark-navy;
+                }
+            }   
+            a:hover,
+            a:focus,
+            &:hover,
+            &:focus {
+                color: white;
+                background-color: $navy;
+            } 
+        }
+    }
+}
+
+.section-heading {
+    font-family: 'Michroma';
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    text-align: start;
+}
+
 // ICONS & ANIMATIONS
 .fa-sort-down {
     font-size: 3rem;
@@ -119,8 +169,10 @@ $dark-navy: #060618;
             }
             &:hover {
                 cursor: pointer;
-                color: black;
-                background-color: rgb(151, 151, 151); 
+                background-color: rgb(151, 151, 151);
+                a {
+                    color: black;; 
+                } 
                 i {
                     margin: 0.6rem;
                     font-size: 2.4rem;
@@ -132,11 +184,15 @@ $dark-navy: #060618;
                 };
                 &:first-child {
                     background-color: #2867B2;
-                    color: white; 
+                    a {
+                        color: white; 
+                    }
                 }
                 &:last-child {
                     background-color: #1DA1F2;
-                    color: white; 
+                    a {
+                        color: white; 
+                    } 
                 }
             }
         }
@@ -153,7 +209,11 @@ $dark-navy: #060618;
 }
 #theatre-technician {
     background-color: teal;
+    .mb {
+        margin-bottom: 5rem;
+    }
     .text-box {
+        position: relative;
         background-color: black; 
         color: teal; 
         font-family: 'Michroma';
@@ -162,59 +222,90 @@ $dark-navy: #060618;
         padding: 40px;
         border-radius: 50px 50px 0px;
     }
+    .tag {
+        position: absolute;
+        color: black;
+        background-color: teal;
+        right: 0;
+        bottom: -0.1rem;
+        margin: 0;
+        padding: 0.5rem;
+    }
+    .text-box-secondary {
+        color: rgb(190, 190, 190); 
+        font-family: 'Michroma';
+        font-weight: bold;
+        font-size: 1.5rem; 
+        padding: 40px;
+    }
+    .link-box {
+        transform-origin: top left;
+        margin-top: 3rem;
+        i {
+            margin: 1rem;
+            font-size: 2rem;
+        }
+        .col {
+            border-radius: 10px 10px 0px;
+            text-align: center;
+            transition-duration: 1s;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            &:hover {
+                cursor: pointer;
+                color: black;
+                background-color: rgb(151, 151, 151); 
+                i {
+                    margin: 0.6rem;
+                    font-size: 2.4rem;
+                }
+                span {
+                    display: inline;
+                    letter-spacing: .2rem; 
+                    transition: 0.5s;
+                };
+                &:first-child {
+                    background-color: black;
+                    a {
+                        color: white; 
+                    }
+                }
+                &:last-child {
+                    background-color: white;
+                    a {
+                        color: teal; 
+                    }
+                }
+            }
+        }
+    }
+    img {
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 20px black;
+    }
+    .backdrop::before {
+        transform: skewY(-5deg);
+        transform-origin: top left;
+        background-image: url(https://www.cyohealthcareer.com.au/wp-content/uploads/2019/06/Operating-theatre-892by532.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: brightness(50%);
+        content: "";
+        position: absolute;
+        width: 100%; 
+        height: 100%;
+        overflow: hidden;
+    }
 }
 #tennis-club {
     background-color: greenyellow;
 }
-
-// UNIVERSAL
-body {
-    color: white;
+footer {
+    height: 50vh;
     background-color: black;
 }
 
-.navbar {
-    padding: 0;
-}
-
-.navbar-toggler {
-    margin-left: auto;
-    &:focus {
-        box-shadow: none;
-    }
-}
-
-ul#main-navigation {
-    width: 100%;
-    li {
-        text-align: center;
-        flex-grow: 1;
-        transition-duration: 0.2s;
-        color: white;
-        background-color: $dark-navy;
-        &.nav-item {
-            a {
-                &.nav-link{
-                    color: $light;
-                    background-color: $dark-navy;
-                }
-            }   
-            a:hover,
-            a:focus,
-            &:hover,
-            &:focus {
-                color: white;
-                background-color: $navy;
-            } 
-        }
-    }
-}
-
-.section-heading {
-    font-family: 'Michroma';
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    text-align: start;
-}
 
 

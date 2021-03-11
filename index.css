@@ -23,6 +23,49 @@
   transform: skewY(-5deg);
 }
 
+body {
+  color: white;
+  background-color: black;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+ul#main-navigation {
+  width: 100%;
+}
+ul#main-navigation li {
+  text-align: center;
+  flex-grow: 1;
+  transition-duration: 0.2s;
+  color: white;
+  background-color: #060618;
+}
+ul#main-navigation li.nav-item a.nav-link {
+  color: #ebebeb;
+  background-color: #060618;
+}
+ul#main-navigation li.nav-item a:hover,
+ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul#main-navigation li.nav-item:focus {
+  color: white;
+  background-color: #0a0a23;
+}
+
+.section-heading {
+  font-family: "Michroma";
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  text-align: start;
+}
+
 .fa-sort-down {
   font-size: 3rem;
 }
@@ -122,8 +165,10 @@
 }
 #intro .link-box .col:hover {
   cursor: pointer;
-  color: black;
   background-color: #979797;
+}
+#intro .link-box .col:hover a {
+  color: black;
 }
 #intro .link-box .col:hover i {
   margin: 0.6rem;
@@ -136,10 +181,14 @@
 }
 #intro .link-box .col:hover:first-child {
   background-color: #2867B2;
+}
+#intro .link-box .col:hover:first-child a {
   color: white;
 }
 #intro .link-box .col:hover:last-child {
   background-color: #1DA1F2;
+}
+#intro .link-box .col:hover:last-child a {
   color: white;
 }
 #intro .heading-div {
@@ -155,7 +204,11 @@
 #theatre-technician {
   background-color: teal;
 }
+#theatre-technician .mb {
+  margin-bottom: 5rem;
+}
 #theatre-technician .text-box {
+  position: relative;
   background-color: black;
   color: teal;
   font-family: "Michroma";
@@ -164,52 +217,90 @@
   padding: 40px;
   border-radius: 50px 50px 0px;
 }
+#theatre-technician .tag {
+  position: absolute;
+  color: black;
+  background-color: teal;
+  right: 0;
+  bottom: -0.1rem;
+  margin: 0;
+  padding: 0.5rem;
+}
+#theatre-technician .text-box-secondary {
+  color: #bebebe;
+  font-family: "Michroma";
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 40px;
+}
+#theatre-technician .link-box {
+  transform-origin: top left;
+  margin-top: 3rem;
+}
+#theatre-technician .link-box i {
+  margin: 1rem;
+  font-size: 2rem;
+}
+#theatre-technician .link-box .col {
+  border-radius: 10px 10px 0px;
+  text-align: center;
+  transition-duration: 1s;
+}
+#theatre-technician .link-box .col a {
+  text-decoration: none;
+  color: black;
+}
+#theatre-technician .link-box .col:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #979797;
+}
+#theatre-technician .link-box .col:hover i {
+  margin: 0.6rem;
+  font-size: 2.4rem;
+}
+#theatre-technician .link-box .col:hover span {
+  display: inline;
+  letter-spacing: 0.2rem;
+  transition: 0.5s;
+}
+#theatre-technician .link-box .col:hover:first-child {
+  background-color: black;
+}
+#theatre-technician .link-box .col:hover:first-child a {
+  color: white;
+}
+#theatre-technician .link-box .col:hover:last-child {
+  background-color: white;
+}
+#theatre-technician .link-box .col:hover:last-child a {
+  color: teal;
+}
+#theatre-technician img {
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 20px black;
+}
+#theatre-technician .backdrop::before {
+  transform: skewY(-5deg);
+  transform-origin: top left;
+  background-image: url(https://www.cyohealthcareer.com.au/wp-content/uploads/2019/06/Operating-theatre-892by532.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(50%);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
 #tennis-club {
   background-color: greenyellow;
 }
 
-body {
-  color: white;
+footer {
+  height: 50vh;
   background-color: black;
-}
-
-.navbar {
-  padding: 0;
-}
-
-.navbar-toggler {
-  margin-left: auto;
-}
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-ul#main-navigation {
-  width: 100%;
-}
-ul#main-navigation li {
-  text-align: center;
-  flex-grow: 1;
-  transition-duration: 0.2s;
-  color: white;
-  background-color: #060618;
-}
-ul#main-navigation li.nav-item a.nav-link {
-  color: #ebebeb;
-  background-color: #060618;
-}
-ul#main-navigation li.nav-item a:hover,
-ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul#main-navigation li.nav-item:focus {
-  color: white;
-  background-color: #0a0a23;
-}
-
-.section-heading {
-  font-family: "Michroma";
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  text-align: start;
 }
 
 /*# sourceMappingURL=index.css.map */
