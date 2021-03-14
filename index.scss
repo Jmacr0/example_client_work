@@ -5,8 +5,8 @@
 
 // VARIABLES
 $light: #ebebeb;
-$navy: #0a0a23;
-$dark-navy: #060618;
+$navy: #07071a;
+$dark-navy: #04040f;
 
 // MIXINS
 @mixin text-box($bg-color, $color) {
@@ -327,7 +327,7 @@ ul#main-navigation {
         @include image(grey);
     }
 }
-footer {
+footer#footer {
     height: 50vh;
     background-color: black;
     .text-box {
@@ -346,6 +346,23 @@ footer {
         }
         button {
             margin-top: 1rem;
+        }
+    }
+    .social-links {
+        @include media-breakpoint-up(md) {
+            border-right: 1px solid rgb(75, 75, 75);
+        }
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+        a {
+            text-decoration: none;
+            color: $light;
+            transition-duration: 0.2s;
+            &:hover {
+                color: grey;
+            }
         }
     }
 }

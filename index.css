@@ -47,7 +47,7 @@ ul#main-navigation li {
   flex-grow: 1;
   transition-duration: 0.2s;
   color: white;
-  background-color: #060618;
+  background-color: #04040f;
 }
 ul#main-navigation li.nav-item .btn {
   color: white;
@@ -58,7 +58,7 @@ ul#main-navigation li.nav-item .btn:focus {
 }
 ul#main-navigation li.nav-item .dropdown-menu {
   padding: 0;
-  background-color: #060618;
+  background-color: #04040f;
 }
 ul#main-navigation li.nav-item .dropdown-item {
   padding: 0.5rem;
@@ -66,12 +66,12 @@ ul#main-navigation li.nav-item .dropdown-item {
 }
 ul#main-navigation li.nav-item a.nav-link {
   color: #ebebeb;
-  background-color: #060618;
+  background-color: #04040f;
 }
 ul#main-navigation li.nav-item a:hover,
 ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul#main-navigation li.nav-item:focus {
   color: white;
-  background-color: #0a0a23;
+  background-color: #07071a;
 }
 
 .section-heading {
@@ -469,11 +469,11 @@ ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul
   box-shadow: 0px 0px 20px 20px grey;
 }
 
-footer {
+footer#footer {
   height: 50vh;
   background-color: black;
 }
-footer .text-box {
+footer#footer .text-box {
   position: relative;
   background-color: white;
   color: black;
@@ -484,23 +484,40 @@ footer .text-box {
   border-radius: 50px 50px 0px;
   margin-bottom: 5rem;
 }
-footer .text-box-secondary {
+footer#footer .text-box-secondary {
   color: #bebebe;
   font-family: "Michroma";
   font-weight: bold;
   font-size: 1.5rem;
   padding: 40px;
 }
-footer .text-box-secondary .ws {
+footer#footer .text-box-secondary .ws {
   word-spacing: 0.3rem;
 }
 @media (min-width: 576px) {
-  footer form {
+  footer#footer form {
     margin-top: 3rem;
   }
 }
-footer form button {
+footer#footer form button {
   margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  footer#footer .social-links {
+    border-right: 1px solid #4b4b4b;
+  }
+}
+footer#footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+footer#footer ul a {
+  text-decoration: none;
+  color: #ebebeb;
+  transition-duration: 0.2s;
+}
+footer#footer ul a:hover {
+  color: grey;
 }
 
 /*# sourceMappingURL=index.css.map */
