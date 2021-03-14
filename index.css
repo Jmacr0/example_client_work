@@ -49,6 +49,21 @@ ul#main-navigation li {
   color: white;
   background-color: #060618;
 }
+ul#main-navigation li.nav-item .btn {
+  color: white;
+  width: 100%;
+}
+ul#main-navigation li.nav-item .btn:focus {
+  box-shadow: none;
+}
+ul#main-navigation li.nav-item .dropdown-menu {
+  padding: 0;
+  background-color: #060618;
+}
+ul#main-navigation li.nav-item .dropdown-item {
+  padding: 0.5rem;
+  color: grey;
+}
 ul#main-navigation li.nav-item a.nav-link {
   color: #ebebeb;
   background-color: #060618;
