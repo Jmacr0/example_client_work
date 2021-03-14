@@ -98,14 +98,6 @@ ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul
     transform: translate(0, 0);
   }
 }
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
 #landing {
   background: linear-gradient(to left, #e66465, #9198e5);
 }
@@ -300,6 +292,9 @@ ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul
 #tennis-club {
   background-color: greenyellow;
 }
+#tennis-club .mb {
+  margin-bottom: 5rem;
+}
 #tennis-club .text-box {
   position: relative;
   background-color: antiquewhite;
@@ -371,10 +366,17 @@ ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul
 #tennis-club .link-box .col:hover:last-child a {
   color: black;
 }
+#tennis-club img {
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 20px antiquewhite;
+}
 
 #watch-shop {
   background-color: white;
   color: black;
+}
+#watch-shop .mb {
+  margin-bottom: 5rem;
 }
 #watch-shop .text-box {
   position: relative;
@@ -436,21 +438,54 @@ ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul
   transition: 0.5s;
 }
 #watch-shop .link-box .col:hover:first-child {
-  background-color: #2867B2;
+  background-color: black;
 }
 #watch-shop .link-box .col:hover:first-child a {
   color: white;
 }
 #watch-shop .link-box .col:hover:last-child {
-  background-color: #1DA1F2;
+  background-color: black;
 }
 #watch-shop .link-box .col:hover:last-child a {
   color: white;
+}
+#watch-shop img {
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 20px grey;
 }
 
 footer {
   height: 50vh;
   background-color: black;
+}
+footer .text-box {
+  position: relative;
+  background-color: white;
+  color: black;
+  font-family: "Michroma";
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 40px;
+  border-radius: 50px 50px 0px;
+  margin-bottom: 5rem;
+}
+footer .text-box-secondary {
+  color: #bebebe;
+  font-family: "Michroma";
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 40px;
+}
+footer .text-box-secondary .ws {
+  word-spacing: 0.3rem;
+}
+@media (min-width: 576px) {
+  footer form {
+    margin-top: 3rem;
+  }
+}
+footer form button {
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */

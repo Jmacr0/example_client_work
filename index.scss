@@ -1,3 +1,8 @@
+// GLOBAL
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
 // VARIABLES
 $light: #ebebeb;
 $navy: #0a0a23;
@@ -77,6 +82,11 @@ $dark-navy: #060618;
         }
     }
 }
+@mixin image($color){
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 20px $color;
+}
+
 // FONTS
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
@@ -182,10 +192,6 @@ ul#main-navigation {
         transform: translate(0, 0);
     }
 }
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
 
 // SECTIONS
 #landing {
@@ -247,8 +253,7 @@ ul#main-navigation {
         @include link-box($light,black,white,white,teal);
     }
     img {
-        border-radius: 5px;
-        box-shadow: 0px 0px 20px 20px black;
+        @include image(black);
     }
     .backdrop::before {
         transform: skewY(-5deg);
@@ -266,6 +271,9 @@ ul#main-navigation {
 }
 #tennis-club {
     background-color: greenyellow;
+    .mb {
+        margin-bottom: 5rem;
+    }
     .text-box {
         @include text-box(antiquewhite,black);
     }
@@ -278,10 +286,16 @@ ul#main-navigation {
     .link-box {
         @include link-box(#336699,black, white, antiquewhite, black);
     }
+    img {
+        @include image(antiquewhite);
+    }
 }
 #watch-shop {
     background-color: white;
     color: black;
+    .mb {
+        margin-bottom: 5rem;
+    }
     .text-box {
         @include text-box(black, white);
     }
@@ -292,12 +306,33 @@ ul#main-navigation {
         @include text-box-secondary(black);
     }
     .link-box {
-        @include link-box(black,#2867B2,white,#1DA1F2,white);
+        @include link-box(black,black, white, black, white);
+    }
+    img {
+        @include image(grey);
     }
 }
 footer {
     height: 50vh;
     background-color: black;
+    .text-box {
+        @include text-box(white, black);
+        margin-bottom: 5rem;
+    }
+    .text-box-secondary {
+        @include text-box-secondary(rgb(190, 190, 190));
+        .ws {
+            word-spacing: 0.3rem;
+        }
+    }
+    form {
+        @include media-breakpoint-up(sm) {
+        margin-top: 3rem;
+        }
+        button {
+            margin-top: 1rem;
+        }
+    }
 }
 
 
