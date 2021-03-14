@@ -131,6 +131,7 @@ ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul
   margin-bottom: 5rem;
 }
 #intro .text-box {
+  position: relative;
   background-color: white;
   color: black;
   font-family: "Michroma";
@@ -221,8 +222,8 @@ ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul
   position: absolute;
   color: black;
   background-color: teal;
-  right: 0;
-  bottom: -0.1rem;
+  right: -0.05rem;
+  bottom: -0.04rem;
   margin: 0;
   padding: 0.5rem;
 }
@@ -248,12 +249,14 @@ ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul
 }
 #theatre-technician .link-box .col a {
   text-decoration: none;
-  color: black;
+  color: #ebebeb;
 }
 #theatre-technician .link-box .col:hover {
   cursor: pointer;
-  color: black;
   background-color: #979797;
+}
+#theatre-technician .link-box .col:hover a {
+  color: black;
 }
 #theatre-technician .link-box .col:hover i {
   margin: 0.6rem;
@@ -296,6 +299,153 @@ ul#main-navigation li.nav-item a:focus, ul#main-navigation li.nav-item:hover, ul
 
 #tennis-club {
   background-color: greenyellow;
+}
+#tennis-club .text-box {
+  position: relative;
+  background-color: antiquewhite;
+  color: black;
+  font-family: "Michroma";
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 40px;
+  border-radius: 50px 50px 0px;
+}
+#tennis-club .tag {
+  position: absolute;
+  color: white;
+  background-color: #336699;
+  right: -0.03rem;
+  bottom: -0.03rem;
+  margin: 0;
+  padding: 0.5rem;
+}
+#tennis-club .text-box-secondary {
+  color: black;
+  font-family: "Michroma";
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 40px;
+}
+#tennis-club .link-box {
+  transform-origin: top left;
+  margin-top: 3rem;
+}
+#tennis-club .link-box i {
+  margin: 1rem;
+  font-size: 2rem;
+}
+#tennis-club .link-box .col {
+  border-radius: 10px 10px 0px;
+  text-align: center;
+  transition-duration: 1s;
+}
+#tennis-club .link-box .col a {
+  text-decoration: none;
+  color: #336699;
+}
+#tennis-club .link-box .col:hover {
+  cursor: pointer;
+  background-color: #979797;
+}
+#tennis-club .link-box .col:hover a {
+  color: black;
+}
+#tennis-club .link-box .col:hover i {
+  margin: 0.6rem;
+  font-size: 2.4rem;
+}
+#tennis-club .link-box .col:hover span {
+  display: inline;
+  letter-spacing: 0.2rem;
+  transition: 0.5s;
+}
+#tennis-club .link-box .col:hover:first-child {
+  background-color: black;
+}
+#tennis-club .link-box .col:hover:first-child a {
+  color: white;
+}
+#tennis-club .link-box .col:hover:last-child {
+  background-color: antiquewhite;
+}
+#tennis-club .link-box .col:hover:last-child a {
+  color: black;
+}
+
+#watch-shop {
+  background-color: white;
+  color: black;
+}
+#watch-shop .text-box {
+  position: relative;
+  background-color: black;
+  color: white;
+  font-family: "Michroma";
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 40px;
+  border-radius: 50px 50px 0px;
+}
+#watch-shop .tag {
+  position: absolute;
+  color: white;
+  background-color: red;
+  right: -0.03rem;
+  bottom: -0.03rem;
+  margin: 0;
+  padding: 0.5rem;
+}
+#watch-shop .text-box-secondary {
+  color: black;
+  font-family: "Michroma";
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 40px;
+}
+#watch-shop .link-box {
+  transform-origin: top left;
+  margin-top: 3rem;
+}
+#watch-shop .link-box i {
+  margin: 1rem;
+  font-size: 2rem;
+}
+#watch-shop .link-box .col {
+  border-radius: 10px 10px 0px;
+  text-align: center;
+  transition-duration: 1s;
+}
+#watch-shop .link-box .col a {
+  text-decoration: none;
+  color: black;
+}
+#watch-shop .link-box .col:hover {
+  cursor: pointer;
+  background-color: #979797;
+}
+#watch-shop .link-box .col:hover a {
+  color: black;
+}
+#watch-shop .link-box .col:hover i {
+  margin: 0.6rem;
+  font-size: 2.4rem;
+}
+#watch-shop .link-box .col:hover span {
+  display: inline;
+  letter-spacing: 0.2rem;
+  transition: 0.5s;
+}
+#watch-shop .link-box .col:hover:first-child {
+  background-color: #2867B2;
+}
+#watch-shop .link-box .col:hover:first-child a {
+  color: white;
+}
+#watch-shop .link-box .col:hover:last-child {
+  background-color: #1DA1F2;
+}
+#watch-shop .link-box .col:hover:last-child a {
+  color: white;
 }
 
 footer {

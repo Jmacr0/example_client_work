@@ -3,6 +3,80 @@ $light: #ebebeb;
 $navy: #0a0a23;
 $dark-navy: #060618;
 
+// MIXINS
+@mixin text-box($bg-color, $color) {
+        position: relative;
+        background-color: $bg-color; 
+        color: $color; 
+        font-family: 'Michroma';
+        font-weight: bold;
+        font-size: 1.5rem; 
+        padding: 40px;
+        border-radius: 50px 50px 0px;
+}
+@mixin tag($bg-color, $color, $r-offset, $b-offset) {
+        position: absolute;
+        color: $color;
+        background-color:$bg-color;
+        right: $r-offset;
+        bottom: $b-offset;
+        margin: 0;
+        padding: 0.5rem;
+}
+@mixin text-box-secondary($color){
+    color: $color; 
+    font-family: 'Michroma';
+    font-weight: bold;
+    font-size: 1.5rem; 
+    padding: 40px;
+
+}
+
+@mixin link-box($color, $h-fc-bg, $h-fc-c, $h-lc-bg, $h-lc-c) {
+    transform-origin: top left;
+    margin-top: 3rem;
+    i {
+        margin: 1rem;
+        font-size: 2rem;
+    }
+    .col {
+        border-radius: 10px 10px 0px;
+        text-align: center;
+        transition-duration: 1s;
+        a {
+            text-decoration: none;
+            color: $color;
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(151, 151, 151);
+            a {
+                color: black;; 
+            } 
+            i {
+                margin: 0.6rem;
+                font-size: 2.4rem;
+            }
+            span {
+                display: inline;
+                letter-spacing: .2rem; 
+                transition: 0.5s;
+            };
+            &:first-child {
+                background-color: $h-fc-bg;
+                a {
+                    color: $h-fc-c; 
+                }
+            }
+            &:last-child {
+                background-color: $h-lc-bg;
+                a {
+                    color: $h-lc-c; 
+                } 
+            }
+        }
+    }
+}
 // FONTS
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
@@ -137,65 +211,13 @@ ul#main-navigation {
         margin-bottom: 5rem;
     }
     .text-box {
-        background-color: white; 
-        color: black; 
-        font-family: 'Michroma';
-        font-weight: bold;
-        font-size: 1.5rem; 
-        padding: 40px;
-        border-radius: 50px 50px 0px;
+        @include text-box(white,black);
     }
     .text-box-secondary {
-        color: rgb(151, 151, 151); 
-        font-family: 'Michroma';
-        font-weight: bold;
-        font-size: 1.5rem; 
-        padding: 40px;
+        @include text-box-secondary(rgba(151,151,151));
     }
     .link-box {
-        transform-origin: top left;
-        margin-top: 3rem;
-        i {
-            margin: 1rem;
-            font-size: 2rem;
-        }
-        .col {
-            border-radius: 10px 10px 0px;
-            text-align: center;
-            transition-duration: 1s;
-            a {
-                text-decoration: none;
-                color: $light;
-            }
-            &:hover {
-                cursor: pointer;
-                background-color: rgb(151, 151, 151);
-                a {
-                    color: black;; 
-                } 
-                i {
-                    margin: 0.6rem;
-                    font-size: 2.4rem;
-                }
-                span {
-                    display: inline;
-                    letter-spacing: .2rem; 
-                    transition: 0.5s;
-                };
-                &:first-child {
-                    background-color: #2867B2;
-                    a {
-                        color: white; 
-                    }
-                }
-                &:last-child {
-                    background-color: #1DA1F2;
-                    a {
-                        color: white; 
-                    } 
-                }
-            }
-        }
+        @include link-box($light,#2867B2,white,#1DA1F2,white);
     }
     .heading-div {
         overflow: hidden;
@@ -213,73 +235,16 @@ ul#main-navigation {
         margin-bottom: 5rem;
     }
     .text-box {
-        position: relative;
-        background-color: black; 
-        color: teal; 
-        font-family: 'Michroma';
-        font-weight: bold;
-        font-size: 1.5rem; 
-        padding: 40px;
-        border-radius: 50px 50px 0px;
+        @include text-box(black,teal);
     }
     .tag {
-        position: absolute;
-        color: black;
-        background-color: teal;
-        right: 0;
-        bottom: -0.1rem;
-        margin: 0;
-        padding: 0.5rem;
+        @include tag(teal,black, -0.05rem, -0.04rem);
     }
     .text-box-secondary {
-        color: rgb(190, 190, 190); 
-        font-family: 'Michroma';
-        font-weight: bold;
-        font-size: 1.5rem; 
-        padding: 40px;
+        @include text-box-secondary(rgb(190, 190, 190));
     }
     .link-box {
-        transform-origin: top left;
-        margin-top: 3rem;
-        i {
-            margin: 1rem;
-            font-size: 2rem;
-        }
-        .col {
-            border-radius: 10px 10px 0px;
-            text-align: center;
-            transition-duration: 1s;
-            a {
-                text-decoration: none;
-                color: black;
-            }
-            &:hover {
-                cursor: pointer;
-                color: black;
-                background-color: rgb(151, 151, 151); 
-                i {
-                    margin: 0.6rem;
-                    font-size: 2.4rem;
-                }
-                span {
-                    display: inline;
-                    letter-spacing: .2rem; 
-                    transition: 0.5s;
-                };
-                &:first-child {
-                    background-color: black;
-                    a {
-                        color: white; 
-                    }
-                }
-                &:last-child {
-                    background-color: white;
-                    a {
-                        color: teal; 
-                    }
-                }
-            }
-        }
+        @include link-box($light,black,white,white,teal);
     }
     img {
         border-radius: 5px;
@@ -301,6 +266,34 @@ ul#main-navigation {
 }
 #tennis-club {
     background-color: greenyellow;
+    .text-box {
+        @include text-box(antiquewhite,black);
+    }
+    .tag {
+        @include tag(#336699, white,-0.03rem, -0.03rem);
+    }
+    .text-box-secondary {
+        @include text-box-secondary(black);
+    }
+    .link-box {
+        @include link-box(#336699,black, white, antiquewhite, black);
+    }
+}
+#watch-shop {
+    background-color: white;
+    color: black;
+    .text-box {
+        @include text-box(black, white);
+    }
+    .tag {
+        @include tag(red, white, -0.03rem, -0.03rem);
+    }
+    .text-box-secondary {
+        @include text-box-secondary(black);
+    }
+    .link-box {
+        @include link-box(black,#2867B2,white,#1DA1F2,white);
+    }
 }
 footer {
     height: 50vh;
